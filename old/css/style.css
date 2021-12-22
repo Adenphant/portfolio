@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+strong {
+    display: block;
+}
+/* General */
+body {
+    background: #202124;
+    font-family: lato;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+header button {
+    color: inherit;
+    
+    padding: 2em;
+    background-color: #202124;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #202124;
+}
+.header {
+    margin: 0 auto;
+    padding: em 0;
+    display: flex;
+    justify-content: space-around;
+}
+h2 {
+    font-size: 2.5em;
+}
+img, video {
+    max-width: 100%;
+}
+
+/* Main top */
+main {
+    padding: 1em;
+}
+.page {
+    padding: 30vh 0 20vh;
+
+}
+.top {
+    font-size: 2.8em;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+.top p{
+    font-weight:300;
+}
+
+#name {
+    display: flex;
+}
+
+.extra {
+    display: none;
+    animation: type 4s steps(60, end) forwards;
+}
+
+#name h1:hover .extra{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.description {
+    font-size: 0.6em;
+    margin: 1em 0 2em;
+    animation-delay: 1s;
+}
+/* .aboutme {
+    font-size: 0.4em;
+    text-align: center;
+    animation-delay: 2s;
+} */
+
+.description span {
+    font-weight:300;
+}
+
+.delay {
+    font-size: 0.4em;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Top background */
+.top {
+    position: relative;
+}
+
+#background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    opacity: 0.2;
+    z-index: -1;
+    object-fit: cover;
+}
+.work {
+    background-color: #202124;
+    z-index: 20;
+    position: relative;
+    padding: 0;
+}
+
+/* About me */
+
+/* Selected work section */
+.work h2 {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.intro{
+    text-align: center;
+    font-weight: light;
+}
+.projects {
+    margin: 3em 0 10em;
+}
+
+.projects h3{
+    font-size: 2em;
+}
+
+.projects span {
+    font-size: 0.6em;
+    font-weight: 300;
+    
+}
+/* Individual project content */
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img img {
+    width: 32%;
+}
+
+.project-content strong{
+    font-size: 1.4em;
+    margin: 2% 0;
+    font-style: italic;
+}
+.project-content p {
+    margin-top: 16px;
+}
+.programs {
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.programs img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    object-fit: cover;
+}
+.cta {
+    display: flex;
+    
+}
+.cta a {
+    display: block;
+    padding: 12px 16px;
+    color:#202124;
+    width: 30%;
+    border: solid 1px white;
+    text-align: center;
+    background-color: white;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.cta a:hover {
+    color:white;
+    background-color: inherit;
+}
+p>.highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Contact  */
+#contact {
+    padding-bottom:5% ;
+}
+#contact-info p {
+    font-size: 1.2em;
+    padding: 1em 0;
+}
+.my-picture {
+    border-radius: 100%;
+    width: 50%;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.links img {
+    width: 50px;
+    margin-right: 10px;
+    
+}
+.contact h2 {
+    text-align: center;
+}
+#picture {
+    align-items: center;
+}
+#picture img {
+    width: 60%;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (min-width: 720px) {
+    .flex {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-column-gap: 20px;
+    }
+    /* #contact {
+        width: 40%;
+    } */
+    .top {
+        font-size: 4em;
+    }
+    .description {
+        width: 60%;
+    }
+    .aboutme {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .projects {
+        margin: 3em 0 10em;
+    }
+    .projects {
+        margin: 3em 0 40%;
+    }
+    .project-content {
+        align-items: center;
+    }
+    #picture img {
+        width: 100%;
+    }
+    #contact-links {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .contact {
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    .work {
+        font-size: 1.2em
+    }
+    .top {
+        font-size: 5em;
+    }
+
+}
+
+@media screen and (min-width: 1050px) {
+    main {
+        padding: 0;
+    }
+ }
